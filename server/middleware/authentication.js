@@ -15,14 +15,6 @@ const authentication = async (req, res, next) => {
       throw { name: "Maaf Kamu Tidak Memiliki Hak Akses" };
     }
 
-    // LOGIC FORCE LOGOUT
-    // const forceLogout =
-    //   !dataUser.statusActive || dataUser.flagDeleted ? true : false;
-
-    // if (forceLogout) {
-    //   throw { name: "Maaf Kamu Tidak Memiliki Hak Akses" };
-    // }
-
     req.user = {
       id: dataUser.id,
       email: dataUser.email,

@@ -32,10 +32,38 @@ const handleError = (err, req, res, next) => {
   } else if (err.name === "Nomor Telepon Tidak Terdaftar") {
     code = 400;
     message = "Nomor Telepon Tidak Terdaftar";
-  } else if (err.name === "Nomor Telepon Sudah Terdaftar") {
-    code = 400;
-    message = "Nomor Telepon Sudah Terdaftar";
   }
+  //
+  else if (err.name === "Email Sudah Terdaftar") {
+    code = 400;
+    message = "Email Sudah Terdaftar";
+  } else if (err.name === "Username Sudah Terdaftar") {
+    code = 400;
+    message = "Username Sudah Terdaftar";
+  } else if (err.name === "Phone Number Sudah Terdaftar") {
+    code = 400;
+    message = "Phone Number Sudah Terdaftar";
+  }
+  //
+  else if (err.name === "Id User Tidak Ditemukan") {
+    code = 400;
+    message = "Id User Tidak Ditemukan";
+  }
+  //
+  else if (err.name === "Id User Tidak Ditemukan") {
+    code = 400;
+    message = "Id User Tidak Ditemukan";
+  } else if (err.name === "Id User Tidak Ditemukan") {
+    code = 400;
+    message = "Id User Tidak Ditemukan";
+  } else if (err.name === "Id User Tidak Ditemukan") {
+    code = 400;
+    message = "Id User Tidak Ditemukan";
+  } else if (err.name === "Id User Tidak Ditemukan") {
+    code = 400;
+    message = "Id User Tidak Ditemukan";
+  }
+
   //
   else if (err.name === "JsonWebTokenError") {
     code = 401;

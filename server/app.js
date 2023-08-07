@@ -9,6 +9,7 @@ const cors = require("cors");
 
 const router = require("./routes");
 const mongoose = require("mongoose");
+const handleError = require("./middleware/handleError");
 
 mongoose.connect(process.env.URL_MONGODB, {
   useNewUrlParser: true,
@@ -29,7 +30,8 @@ app
   .use(cors())
   .use(express.json())
   .use(express.urlencoded({ extended: true }))
-  .use("/", router);
+  .use("/", router)
+  .use(handleError);
 
 app.listen(port, () => {
   console.log(`SERVER MERN CONNECT`);
